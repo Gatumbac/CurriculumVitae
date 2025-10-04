@@ -1,0 +1,125 @@
+:root {
+	/*Definir variables en CSS*/
+	--font: "Montserrat", sans-serif;
+	
+	--bgColor: #222831;
+	--bgColorSecondary: #393E46;
+	
+	--textColor: #DFD0B8;
+	--textColorSecondary: #948979;
+	
+	--accentColor: #4FC3F7;
+	--accentColorSecondary: #948979;
+	
+	--white: #ffffff;
+	--black: #000000;
+}
+
+html{
+	box-sizing: border-box; /*Box Model - Facilita modelo de caja y dimensiones*/
+	font-size: 62.5%; /*Cambio unidad de dimension: 1rem = 10px*/
+	
+	font-family: var(--font);
+	font-style: normal;
+	font-weight: normal;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit; /*Todos los elementos heredan el border-box*/
+}
+
+body {
+	background-color: var(--bgColor);
+	color: var(--textColor);
+	font-size: 1.6rem;
+}
+
+h1, h2, h3, h4 {
+	line-height: 1.2;
+}
+
+h1 {
+	font-size: 4.8rem;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 4rem;
+	font-weight: 600;
+}
+
+h3 {
+	font-size: 3.2rem;
+	font-weight: 500;
+}
+
+h4 {
+	font-size: 2.8rem;
+	font-weight: 500;
+}
+
+a {
+	text-decoration: none;
+	color: var(--textColorSecondary);
+}
+
+p {
+	line-height: 1.6;
+}
+
+img {
+	max-width: 100%;
+}
+
+/*Clase para centrar el contenido*/
+.container {
+	margin: 0 auto;
+	max-width: 100rem;
+}
+
+/* Pagina web */
+.header, .footer {
+	background-color: var(--bgColorSecondary);
+	
+}
+
+.header__nav {
+
+}
+
+.nav__list {
+	list-style: none;
+	padding: 2rem;
+	margin: 0;
+	
+	display: flex;
+	justify-content: center;
+	gap: 4rem;
+}
+
+.nav__li {
+	margin: 0;
+	
+}
+
+.nav__li a {
+	font-weight: 500;
+	
+}
+
+.about {
+	text-align: center;
+}
+
+.footer__div {
+	padding: 2rem 3rem;
+	
+}
+
+.footer__div p {
+	text-align: center;
+	margin: 0;
+	
+}
+
+
