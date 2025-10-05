@@ -107,10 +107,6 @@ img {
 	
 }
 
-.about {
-	text-align: center;
-}
-
 .footer__div {
 	padding: 2rem 3rem;
 	
@@ -122,4 +118,32 @@ img {
 	
 }
 
+.profile {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 3rem;
+}
 
+.profile__description {
+	text-align: center;
+}
+
+.profileImage__img {
+	max-width: 20rem;
+	margin-top: 2rem;
+	border-radius: 50%;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	border: 0.3rem solid #ffffff;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profileImage__img:hover {
+  transform: scale(1.05); /* pequeño zoom al pasar el mouse */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.profile__name {
+	margin: 2rem 0;
+}
