@@ -71,6 +71,12 @@ img {
 	max-width: 100%;
 }
 
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
 /*Clase para centrar el contenido*/
 .container {
 	margin: 0 auto;
@@ -80,42 +86,47 @@ img {
 /* Pagina web */
 .header, .footer {
 	background-color: var(--bgColorSecondary);
-	
 }
 
 .header__nav {
+	padding: 2rem;
+}
 
+@media(min-width: 768px) {
+	.header__nav {
+		padding: 2rem 10rem;
+	}
 }
 
 .nav__list {
-	list-style: none;
-	padding: 2rem;
-	margin: 0;
-	
 	display: flex;
-	justify-content: center;
-	gap: 4rem;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+}
+
+@media(min-width: 768px) {
+	.nav__list {
+		flex-direction: row;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
 }
 
 .nav__li {
 	margin: 0;
-	
 }
 
 .nav__li a {
 	font-weight: 500;
-	
 }
 
-.footer__div {
-	padding: 2rem 3rem;
-	
+.main {
+	padding: 2rem;
 }
 
-.footer__div p {
-	text-align: center;
-	margin: 0;
-	
+main section {
+    margin-bottom: 4rem; 
 }
 
 .profile {
@@ -146,4 +157,38 @@ img {
 
 .profile__name {
 	margin: 2rem 0;
+}
+
+.contact {}
+
+#map {
+   width: 100%; 
+   height: 580px; 
+   box-shadow: 5px 5px 5px #888; 
+}
+
+.footer {
+	padding: 2rem;
+}
+
+.footer__div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+	
+}
+
+.footer__div p {
+	text-align: center;
+	margin: 0;
+	
+}
+
+.footer__contact {
+	text-align: center;
+}
+
+.footer__contact h4 {
+	margin: 1.2rem;
 }

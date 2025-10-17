@@ -1,29 +1,37 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Curriculum Vitae</title>
+		<title>Gabriel Tumbaco | CV</title>
+		<link href="./assets/favicon.svg" rel="icon">
 		<link href="normalize.css" rel="stylesheet">
 		<link href="styles.css" rel="stylesheet">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+			integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+			crossorigin=""/>
+			<!-- Make sure you put this AFTER Leaflet's CSS -->
+			<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+			integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+			crossorigin=""></script>
 	</head>
 	<body>
 		<header class="header">
 			<nav class="header__nav">
 				<ul class="nav__list">
 	                <li class="nav__li"><a href="#about">Sobre mí</a></li>
-	                <li class="nav__li"><a href="#objective">Objetivo</a></li>
 	                <li class="nav__li"><a href="#projects">Proyectos</a></li>
 	                <li class="nav__li"><a href="#education">Educación</a></li>
 	                <li class="nav__li"><a href="#skills">Habilidades</a></li>
 	                <li class="nav__li"><a href="#courses">Certificaciones</a></li>
+	                <li class="nav__li"><a href="#contact">Contacto</a></li>
 				</ul>
 			</nav>
 		</header>
 		
-		<main class="container">
+		<main class="container main">
 			<section class="profile">
 				<div class="profileImage">
 					<img class="profileImage__img" src="assets/profile3.png">
@@ -38,10 +46,8 @@
 				<h2>Sobre mí</h2>
 				<p>Actualmente me encuentro estudiando Ingeniería en Computación en ESPOL. Me apasiona la tecnología y la construcción de soluciones innovadoras que simplifiquen la vida de las personas.</p>
 				<p>Mis intereses son el Desarrollo Web y Móvil, Ingeniería de Software, Ciencia de Datos y Estadística Aplicada.</p>
-			</section>
-			<section id="objective">
-				<h2>Objetivo profesional</h2>
 				<p>Mi objetivo profesional es ser Arquitecto de Software y/o Director de Proyectos en TI.</p>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/CfEOwQnd-OM?si=n4SVI77NmWE1vUeg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 			</section>
 			<section id="projects">
 				<h2>Proyectos</h2>
@@ -62,12 +68,42 @@
 				<h2>Cursos y Certificaciones</h2>
 				<p>IA, Desarrollo Web, Comunicación, Prototipado, Bases de Datos</p>
 			</section>
+			<section id="contact">
+				<h2>Contacto</h2>
+				<div class="contact__container">
+					<form class="contact__form">
+						<div>
+							<label></label>
+						</div>
+					</form>
+					<div id="map">
+					</div>
+				</div>
+			</section>
 		</main>
 
 		<footer class="footer">
 			<div class="container footer__div">
-				<p>&copy; 2025 Gabriel Tumbaco. Todos los derechos reservados<p>			
+				<div class="footer__contact">
+					<h4>Información de Contacto</h4>
+					<ul>
+						<li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/gabriel-tumbaco-santana/" target="_blank">Gabriel Tumbaco</a></li>
+						<li><strong>GitHub:</strong> <a href="https://github.com/Gatumbac" target="_blank">Gatumbac</a></li>
+						<li><strong>Email:</strong> gatumbac@espol.edu.ec</li>
+					</ul>
+				</div>
+				<p>&copy; 2025 Gabriel Tumbaco. Todos los derechos reservados</p>
 			</div>
-		</footer>	
+		</footer>
+		
+		<script> 
+			var map = L.map('map').setView([-2.1445892311484624, -79.96776285707577], 18); 
+			L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+				maxZoom: 19,
+				attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+			}).addTo(map);
+			L.control.scale().addTo(map);
+			L.marker([-2.1445892311484624, -79.96776285707577],{draggable: false}).addTo(map);
+		</script>		
 	</body>
 </html>	
