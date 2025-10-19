@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 	<head>
 		<meta charset="utf-8">
+		<meta name="description" content="Curriculum Vitae">
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="author" content="Gatumbac">
+		
 		<title>Gabriel Tumbaco | CV</title>
-		<link href="./assets/favicon.svg" rel="icon">
+		<link href="./assets/img/favicon.svg" rel="icon">
 		<link href="normalize.css" rel="stylesheet">
 		<link href="styles.css" rel="stylesheet">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +29,6 @@
 	                <li class="nav__li"><a href="#projects">Proyectos</a></li>
 	                <li class="nav__li"><a href="#education">Educación</a></li>
 	                <li class="nav__li"><a href="#skills">Habilidades</a></li>
-	                <li class="nav__li"><a href="#courses">Certificaciones</a></li>
 	                <li class="nav__li"><a href="#contact">Contacto</a></li>
 				</ul>
 			</nav>
@@ -34,47 +37,245 @@
 		<main class="container main">
 			<section class="profile">
 				<div class="profileImage">
-					<img class="profileImage__img" src="assets/profile3.png">
+					<img class="profileImage__img" src="./assets/img/profile3.png" alt="Imagen Perfil">
 				</div>
 				<div class="profile__description">
 					<h1 class="profile__name">Gabriel Tumbaco Santana</h1>
 					<p class="profile__title">Desarrollador Web Junior</p>
 				</div>
-
+				<a class="button" href="#about">Acerca de mí</a>
 			</section>
+			
 			<section id="about">
 				<h2>Sobre mí</h2>
-				<p>Actualmente me encuentro estudiando Ingeniería en Computación en ESPOL. Me apasiona la tecnología y la construcción de soluciones innovadoras que simplifiquen la vida de las personas.</p>
-				<p>Mis intereses son el Desarrollo Web y Móvil, Ingeniería de Software, Ciencia de Datos y Estadística Aplicada.</p>
-				<p>Mi objetivo profesional es ser Arquitecto de Software y/o Director de Proyectos en TI.</p>
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/CfEOwQnd-OM?si=n4SVI77NmWE1vUeg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				<div class="about__container">
+					<div class="about__text">
+						<p>
+							Soy estudiante de Ingeniería en Computación en ESPOL. Me apasiona la tecnología, el desarrollo web y el diseño de soluciones que mejoren la vida de las personas. Disfruto aprender nuevas herramientas y participar en proyectos donde pueda aplicar lógica, creatividad y trabajo en equipo.
+						</p>
+						<p>
+							Nacido en Guayaquil, mi interés por la tecnología comenzó desde pequeño, fascinado por cómo las computadoras podían automatizar tareas. Esta curiosidad me llevó a elegir Ingeniería en Computación en la ESPOL, un reto que me motiva a aprender constantemente sobre hardware y software.
+						</p>
+						<p>
+							Actualmente, en quinto semestre, participo activamente en ayudantías de docencia y clubes, buscando siempre construir nuevos proyectos y desarrollar habilidades multidisciplinarias.
+						</p>
+					</div>
+					<div class="about__image">
+						<img src="./assets/img/espol.jpg" alt="Gabriel Tumbaco Espol">
+					</div>
+				</div>
 			</section>
+			
+			
 			<section id="projects">
-				<h2>Proyectos</h2>
-				<p>Desde inicios de la carrera he participado y contribuido a varios proyectos para diversas asignaturas. Por mi cuenta, he aprendido otras tecnologías web y desarrollado varios sistemas que dan solución a problemas del mundo real.</p>
+				<h2>Proyectos Destacados</h2>
+				<p class="projects__intro">
+					Estos son algunos de los proyectos en los que he trabajado, aplicando tanto tecnologías de Front-End como de Back-End.
+				</p>
+				
+				<div class="projects__grid">
+
+					<article class="project-card">
+						<img class="project-card__img" src="./assets/img/devwebcamp.png" alt="Vista previa del Proyecto 1">
+						
+						<div class="project-card__content">
+							<h3>DevWebCamp</h3>
+							<p>
+								Plataforma web completa para la gestión integral de un evento de conferencias y workshops para desarrolladores.
+							</p>
+							
+							<div class="project-card__tags">
+								<span>PHP</span>
+								<span>MySQL</span>
+								<span>SASS</span>
+								<span>JavaScript</span>
+							</div>
+							
+							<div class="project-card__links">
+								<a href="https://github.com/Gatumbac/DevWebCamp" class="project-card__link" target="_blank">
+									Ver Código
+								</a>
+							</div>
+						</div>
+					</article>
+					
+					<article class="project-card">
+						<img class="project-card__img" src="./assets/img/uptask.png" alt="Vista previa del Proyecto 2">
+						
+						<div class="project-card__content">
+							<h3>UpTask</h3>
+							<p>
+								Plataforma web interactiva para la gestión de tareas en proyectos personales o profesionales. 
+							</p>
+							
+							<div class="project-card__tags">
+								<span>PHP</span>
+								<span>MySQL</span>
+								<span>SASS</span>
+								<span>JavaScript</span>
+							</div>
+							
+							<div class="project-card__links">
+								<a href="https://github.com/Gatumbac/UpTask" class="project-card__link" target="_blank">
+									Ver Código
+								</a>
+							</div>
+						</div>
+					</article>
+					
+					<article class="project-card">
+						<img class="project-card__img" src="./assets/img/appsalon.png" alt="Vista previa del Proyecto 3">
+						
+						<div class="project-card__content">
+							<h3>AppSalon</h3>
+							<p>
+								Plataforma web diseñada para gestionar citas en un salón de belleza. Permite a los clientes reservar sus servicios de forma interactiva.
+							</p>
+							
+							<div class="project-card__tags">
+								<span>PHP</span>
+								<span>MySQL</span>
+								<span>SASS</span>
+								<span>JavaScript</span>
+							</div>
+							
+							<div class="project-card__links">
+								<a href="https://github.com/Gatumbac/AppSalon" class="project-card__link" target="_blank">
+									Ver Código
+								</a>
+							</div>
+						</div>
+					</article>
+				</div>
 			</section>
+			
 			<section id="education">
 				<h2>Educación</h2>
-				<ul>
-					<li><p>Grado en Ingeniería en Computación - ESPOL (En curso)</p></li>
-					<li><p>Bachiller en Contabilidad - Unidad Educativa Fiscal Veintiocho de Mayo (2023)</p></li>
-				</ul>
+				<div class="education__grid">
+					<div class="education__item">
+						<h3>Grado en Ingeniería en Computación</h3>
+						<p>ESPOL (2023 - Actualidad)</p>
+					</div>
+					
+					<div class="education__item">
+						<h3>Bachiller en Contabilidad</h3>
+						<p>Unidad Educativa Fiscal Veintiocho de Mayo (2020-2023)</p>
+					</div>
+				</div>
 			</section>
+			
 			<section id="skills">
 				<h2>Habilidades Técnicas</h2>
-				<p>HTML, CSS, JS, SASS, Tailwind, PHP, Python, Node.js, MySQL, MongoDB</p>
+				<div class="skills__grid">
+					<div class="skills__category">
+						<h3>Front-End</h3>
+						<ul>
+							<li>HTML5</li>
+							<li>CSS3</li>
+							<li>JavaScript</li>
+							<li>SASS</li>
+							<li>TailwindCSS</li>
+						</ul>
+					</div>
+					
+					<div class="skills__category">
+						<h3>Back-End</h3>
+						<ul>
+							<li>PHP</li>
+							<li>Node.js</li>
+							<li>Python</li>
+						</ul>
+					</div>
+
+					<div class="skills__category">
+						<h3>Bases de Datos y Herramientas</h3>
+						<ul>
+							<li>MySQL</li>
+							<li>MongoDB</li>
+							<li>Git & GitHub</li>
+						</ul>
+					</div>
+				</div>
 			</section>
-			<section id="courses">
-				<h2>Cursos y Certificaciones</h2>
-				<p>IA, Desarrollo Web, Comunicación, Prototipado, Bases de Datos</p>
+			
+			<section id="video">
+				<h2>Video Recomendado</h2>
+				<div class="video__section">
+					<iframe
+						class="responsive-video"
+						src="https://www.youtube.com/embed/CfEOwQnd-OM?si=n4SVI77NmWE1vUeg" 
+						title="YouTube video player" 
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+						referrerpolicy="strict-origin-when-cross-origin" 
+						allowfullscreen>
+					</iframe>
+				</div>
 			</section>
+			
+			
 			<section id="contact">
 				<h2>Contacto</h2>
 				<div class="contact__container">
-					<form class="contact__form">
-						<div>
-							<label></label>
+					<form class="contact__form" method="GET">
+						<div class="form__group">
+							<label class="form__label--bold" for="name">Tu Nombre:</label>
+							<input type="text" id="name" name="user_name" placeholder="Ej: Juan Perez" required>
 						</div>
+						<div class="form__group">
+							<label class="form__label--bold" for="email">Tu Email:</label>
+							<input type="email" id="email" name="user_email" placeholder="Ej: example@email.com" required>
+						</div>
+
+						<div class="form__group">
+							<label class="form__label--bold" for="reason">Motivo del Contacto:</label>
+							<select id="reason" name="contact_reason" required>
+								<option value="" disabled selected>-- Seleccione --</option>
+								<option value="oferta_laboral">Oferta Laboral</option>
+								<option value="colaboracion">Colaboración en Proyecto</option>
+								<option value="consulta">Consulta o Feedback</option>
+							</select>
+						</div>
+
+						<fieldset class="form__group">
+							<legend class="form__label--bold">Modalidad de Interés</legend>
+							<div class="radio__option">
+								<label for="full-time">Full-time</label>
+								<input type="radio" id="full-time" name="modality" value="full-time" required>
+							</div>
+							<div class="radio__option">
+								<label for="part-time">Part-time / Freelance</label>
+								<input type="radio" id="part-time" name="modality" value="part-time">
+							</div>
+							<div class="radio__option">
+								<label for="n/a">Otro (ver mensaje)</label>
+								<input type="radio" id="n/a" name="modality" value="n/a">
+							</div>
+						</fieldset>
+						
+						<fieldset class="form__group">
+							<legend class="form__label--bold">Tecnologías Relevantes (opcional)</legend>
+							<div class="check__option">
+								<label for="frontend">Front-End</label>
+								<input type="checkbox" id="frontend" name="tech_interest[]" value="frontend">
+							</div>
+							<div class="check__option">
+								<label for="backend">Back-End</label>
+								<input type="checkbox" id="backend" name="tech_interest[]" value="backend">
+							</div>
+							<div class="check__option">
+								<label for="db">Bases de Datos</label>
+								<input type="checkbox" id="db" name="tech_interest[]" value="db">
+							</div>
+						</fieldset>
+
+						<div class="form__group">
+							<label class="form__label--bold" for="message">Mensaje:</label>
+							<textarea id="message" name="user_message" rows="6" placeholder="Hola Gabriel, te contacto porque..." required></textarea>
+						</div>
+
+						
+						<button type="submit" class="button button-submit">Enviar Mensaje</button>
+						
 					</form>
 					<div id="map">
 					</div>
@@ -96,6 +297,7 @@
 			</div>
 		</footer>
 		
+		<!-- Script para mapa de Leaflet -->
 		<script> 
 			var map = L.map('map').setView([-2.1445892311484624, -79.96776285707577], 18); 
 			L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
